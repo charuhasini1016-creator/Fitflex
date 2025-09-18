@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FitFlex</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #ffecd2, #fcb69f); color: #333; }
+    header { background: #ff6f61; color: white; padding: 20px; text-align: center; font-size: 28px; font-weight: bold; letter-spacing: 2px; }
+    nav { display: flex; justify-content: center; background: #333; flex-wrap: wrap; }
+    nav a { color: white; padding: 14px 20px; text-decoration: none; font-size: 18px; }
+    nav a:hover { background: #ff6f61; border-radius: 6px; }
+    section { padding: 30px; display: none; }
+    .active { display: block; }
+    .form-box, .counter-box, .health-box { background: white; padding: 25px; max-width: 400px; margin: auto; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-align: center; }
+    .form-box input, .form-box button, .form-box select, .counter-box button, .health-box input, .health-box button { width: 100%; padding: 10px; margin: 10px 0; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; }
+    .form-box button, .counter-box button, .health-box button { background: #ff6f61; color: white; font-weight: bold; cursor: pointer; border: none; }
+    .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 15px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); text-align: center; }
+    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; margin-bottom: 10px; }
+    .card h3 { margin: 10px 0; color: #ff6f61; }
+    .card p { font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>💪 FitFlex - Your Fitness Partner</header>
+  <nav>
+    <a href="#" onclick="showPage('user')">User Details</a>
+    <a href="#" onclick="showPage('exercise')">Exercises</a>
+    <a href="#" onclick="showPage('yoga')">Yoga</a>
+    <a href="#" onclick="showPage('diet')">Diet Foods</a>
+    <a href="#" onclick="showPage('steps')">Steps Counter</a>
+    <a href="#" onclick="showPage('health')">Health Meter</a>
+  </nav>
+
+  <!-- User Details -->
+  <section id="user" class="active">
+    <div class="form-box">
+      <h2>Enter Your Details</h2>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="number" placeholder="Age" required>
+      <select>
+        <option>Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+      <button onclick="alert('Details Submitted ✅')">Submit</button>
+    </div>
+  </section>
+
+  <!-- Exercises -->
+  <section id="exercise">
+    <h2>🏋️ Exercises</h2>
+    <div class="card-container">
+      <div class="card"><img src="https://images.unsplash.com/photo-1594737625785-c2c39c93b91f" alt="Pushups"><h3>Push Ups</h3><p>3×15 reps</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1599058918144-7a23a1eeb95b" alt="Squats"><h3>Squats</h3><p>3×20 reps</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Plank"><h3>Plank</h3><p>Hold 60s × 3</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1583454110551-21f1fda89731" alt="Crunches"><h3>Crunches</h3><p>3×25 reps</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Deadlift"><h3>Deadlifts</h3><p>3×10 reps</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1616279964470-4d76c8c0f1a7" alt="Lunges"><h3>Lunges</h3><p>3×12 each leg</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e" alt="Bicep Curls"><h3>Bicep Curls</h3><p>3×15 reps</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1599058918144-7a23a1eeb95b" alt="Burpees"><h3>Burpees</h3><p>3×12 reps</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1594737625785-c2c39c93b91f" alt="Jumping Jacks"><h3>Jumping Jacks</h3><p>2×50 reps</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1616279964470-4d76c8c0f1a7" alt="Mountain Climbers"><h3>Mountain Climbers</h3><p>3×40 reps</p></div>
+    </div>
+  </section>
+
+  <!-- Yoga -->
+  <section id="yoga">
+    <h2>🧘 Yoga Poses</h2>
+    <div class="card-container">
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Tadasana_Samadhi_Asana.jpg" alt="Mountain Pose"><h3>Mountain Pose</h3><p>Hold 1 min</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Bhujangasana.jpg" alt="Cobra"><h3>Cobra Pose</h3><p>Hold 30s</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Balasana_Child%27s_Pose.jpg" alt="Child Pose"><h3>Child Pose</h3><p>Hold 1 min</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Downward-Facing_Dog.jpg" alt="Downward Dog"><h3>Downward Dog</h3><p>Hold 1 min</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Vrksasana_Tree_pose.jpg" alt="Tree Pose"><h3>Tree Pose</h3><p>Hold 30s</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Padmasana-Lotus_pose.jpg" alt="Lotus"><h3>Lotus Pose</h3><p>Hold 2 min</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Savasana_Corpse_Pose.jpg" alt="Corpse"><h3>Corpse Pose</h3><p>Relax 5 min</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Virabhadrasana_Warrior_pose.jpg" alt="Warrior"><h3>Warrior Pose</h3><p>Hold 45s</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Setu_Bandha_Sarvangasana.jpg" alt="Bridge"><h3>Bridge Pose</h3><p>Hold 1 min</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Ustrasana_Camel_Pose.jpg" alt="Camel"><h3>Camel Pose</h3><p>Hold 40s</p></div>
+    </div>
+  </section>
+
+  <!-- Diet Foods -->
+  <section id="diet">
+    <h2>🥗 Healthy Diet Recipes</h2>
+    <div class="card-container">
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Greek_Salad_Choriatiki.jpg" alt="Greek Salad"><h3>Greek Salad</h3><p>Veggies, olives, feta.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Oatmeal_Porridge.jpg" alt="Oats"><h3>Oats Porridge</h3><p>Oats + milk + fruits.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Vegetable_soup.jpg" alt="Veg Soup"><h3>Vegetable Soup</h3><p>Light & nutritious.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Chicken_Salad.jpg" alt="Chicken Salad"><h3>Chicken Salad</h3><p>Grilled chicken + greens.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Fruit_Salad.jpg" alt="Fruit Bowl"><h3>Fruit Bowl</h3><p>Mixed fruits.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Avocado_Toast.jpg" alt="Avocado Toast"><h3>Avocado Toast</h3><p>Avocado + bread.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Quinoa_Salad.jpg" alt="Quinoa Salad"><h3>Quinoa Salad</h3><p>Protein-rich.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Grilled_Salmon_Salad.jpg" alt="Salmon"><h3>Grilled Salmon</h3><p>Omega-3 rich.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Lentil_Soup.jpg" alt="Lentil Soup"><h3>Lentil Soup</h3><p>High protein.</p></div>
+      <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Chickpea_Curry.jpg" alt="Chickpea"><h3>Chickpea Curry</h3><p>Spicy & healthy.</p></div>
+    </div>
+  </section>
+
+  <!-- Steps Counter -->
+  <section id="steps">
+    <h2>👣 Steps Counter</h2>
+    <div class="counter-box">
+      <h3>Steps: <span id="stepCount">0</span></h3>
+      <button onclick="incrementSteps()">Add Step</button>
+      <button onclick="resetSteps()">Reset</button>
+    </div>
+  </section>
+
+  <!-- Health/BMI -->
+  <section id="health">
+    <h2>❤️ Health Meter (BMI)</h2>
+    <div class="health-box">
+      <input type="number" id="weight" placeholder="Weight (kg)">
+      <input type="number" id="height" placeholder="Height (cm)">
+      <button onclick="calculateBMI()">Calculate BMI</button>
+      <h3 id="bmiResult"></h3>
+    </div>
+  </section>
+
+  <script>
+    function showPage(pageId){
+      document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+      document.getElementById(pageId).classList.add("active");
+    }
+
+    let steps = 0;
+    function incrementSteps(){
+      steps++;
+      document.getElementById("stepCount").innerText = steps;
+    }
+    function resetSteps(){
+      steps = 0;
+      document.getElementById("stepCount").innerText = steps;
+    }
+
+    function calculateBMI(){
+      let weight = parseFloat(document.getElementById("weight").value);
+      let height = parseFloat(document.getElementById("height").value)/100;
+      if(weight >0 && height>0){
+        let bmi = (weight/(height*height)).toFixed(1);
+        let status = bmi<18.5 ? "Underweight" : bmi<25 ? "Normal" : bmi<30 ? "Overweight" : "Obese";
+        document.getElementById("bmiResult").innerText = `BMI: ${bmi} (${status})`;
+      } else {
+        alert("Enter valid values");
+      }
+    }
+  </script>
+</body>
+</html>
